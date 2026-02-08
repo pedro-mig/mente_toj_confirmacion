@@ -46,28 +46,7 @@
       color: #555;
       font-size: 15px;
       margin: 12px 0;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 12px 20px;
-      font-size: 15px;
-      border: none;
-      border-radius: 10px;
-      background: #2e7d32;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #256628;
-    }
-
-    .msg {
-      margin-top: 16px;
-      color: #c62828;
-      display: none;
-      font-size: 14px;
+      line-height: 1.4;
     }
 
     @keyframes fadeIn {
@@ -85,31 +64,7 @@
 
     <h1>Cuenta confirmada</h1>
     <p>Tu cuenta fue verificada correctamente.</p>
-    <p>Puedes abrir la aplicación <strong>Mente Toj</strong> si ya está instalada.</p>
-
-    <button onclick="abrirApp()">Abrir Mente Toj</button>
-
-    <div class="msg" id="msg">
-      No se pudo abrir la aplicación.  
-      Asegúrate de tener <strong>Mente Toj</strong> instalada en tu dispositivo.
-    </div>
+    <p>Ya puedes cerrar esta página y continuar usando <strong>Mente Toj</strong>.</p>
   </div>
-
-  <script>
-    function abrirApp() {
-      const start = Date.now();
-
-      // Intent / deep link
-      window.location.href =
-        "mente_toj://login-callback";
-
-      // Si no se abre en ~1.5s, asumimos que no está instalada
-      setTimeout(() => {
-        if (Date.now() - start < 2000) {
-          document.getElementById("msg").style.display = "block";
-        }
-      }, 1500);
-    }
-  </script>
 </body>
 </html>
