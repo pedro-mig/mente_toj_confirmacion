@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuenta confirmada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="refresh" content="4;url=com.example.salud_mental://login-callback/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 32px 24px;
+      max-width: 420px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .icon {
+      margin-bottom: 12px;
+    }
+
+    .icon img {
+      width: 56px;
+      height: 56px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0;
+      color: #2e7d32;
+      font-size: 24px;
+    }
+
+    p {
+      color: #555;
+      font-size: 15px;
+      margin: 12px 0;
+      line-height: 1.4;
+    }
+
+    .loader {
+      margin: 20px auto 0;
+      width: 36px;
+      height: 36px;
+      border: 4px solid #e0e0e0;
+      border-top: 4px solid #2e7d32;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .icon img {
+        width: 46px;
+        height: 46px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="icon">
+      <!-- ⚠️ Usa URL absoluta si es para email -->
+      <img src="icons/confirmar.png" alt="Cuenta confirmada">
+    </div>
+    <h1>Cuenta confirmada</h1>
+    <p>Tu cuenta fue verificada correctamente.</p>
+    <p>En unos segundos abriremos la aplicación.</p>
+    <div class="loader"></div>
+  </div>
+</body>
+</html>
